@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Wear</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .womens-wear {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: white;
+        }
+        .womens-wear-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ff3366;
+        }
+        .add-to-cart {
+            background: #ff3366;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .add-to-cart:hover {
+            background: #cc0033;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Fashion Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="womens-wear.html" class="active">Women's Wear</a></li>
+                <li><a href="mens-wear.html">Men's Wear</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="cart.html">🛒 Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="womens-wear">
+        <div class="womens-wear-container">
+            <h1>Women's Wear Collection</h1>
+            <p>Discover the latest trends in women's fashion.</p>
+        </div>
+    </section>
+    
+    <section class="products">
+        <div class="product-grid">
+            <div class="product">
+                <img src="41.webp" alt="Elegant Dress">
+                <p>Elegant Evening Dress</p>
+                <p class="price">$120.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="baner-site_ff45df03-84b3-4d76-b1f7-6f14dfad1db2_500x.webp" alt="Stylish Heels">
+                <p>Stylish High Heels</p>
+                <p class="price">$75.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="main_fashion-website-design-cover.webp" alt="Designer Handbag">
+                <p>Luxury Designer Handbag</p>
+                <p class="price">$199.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Rowson_300_500x.webp" alt="Chic Jacket">
+                <p>Chic Leather Jacket</p>
+                <p class="price">$89.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Fashion Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

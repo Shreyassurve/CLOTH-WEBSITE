@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Hub - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background: white;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: white;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                width: 200px;
+                padding: 10px 0;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                color: black;
+                padding: 10px;
+                text-decoration: none;
+                display: block;
+                font-size: 18px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Fashion Hub</div>
+        <nav>
+            <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="womens-wear.html">Women's Wear</a></li>
+                <li><a href="mens-wear.html">Men's Wear</a></li>
+                <li><a href="favourites.html">Favourites</a></li>
+                <li><a href="share.html">Share</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li class="cart-icon">🛒 <span id="cart-count">0</span></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Fashion Hub</h1>
+            <p>Step into the world of style and elegance. Explore our latest fashion collections.</p>
+            <button onclick="window.location.href='shop.html'" class="shop-btn">Shop Now</button>
+        </div>
+    </section>
+
+    <section class="products">
+        <h2>Best Sellers</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="41.webp" alt="Jacket">
+                <p>Stylish Jacket</p>
+                <p class="price">$99.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="istockphoto-927561308-612x612.jpg" alt="Sneakers">
+                <p>Trendy Sneakers</p>
+                <p class="price">$79.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="baner-site_ff45df03-84b3-4d76-b1f7-6f14dfad1db2_500x.webp" alt="T-Shirt">
+                <p>Classic T-Shirt</p>
+                <p class="price">$29.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="Rowson_300_500x.webp" alt="Sunglasses">
+                <p>Luxury Sunglasses</p>
+                <p class="price">$49.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="opumo-banner-13.avif" alt="Handbag">
+                <p>Designer Handbag</p>
+                <p class="price">$159.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fashion Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

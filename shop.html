@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Fashion Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .shop-banner {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            font-size: 28px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin: 20px auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .products {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            overflow: hidden;
+        }
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .product:hover img {
+            transform: scale(1.1);
+        }
+        .product-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #333;
+        }
+        .price {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #ff3366;
+        }
+        .add-to-cart {
+            background: #ff3366;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .add-to-cart:hover {
+            background: #cc0033;
+            transform: scale(1.1);
+        }
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        width: 200px;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Fashion Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="womens-wear.html">Women's Wear</a></li>
+                <li><a href="mens-wear.html">Men's Wear</a></li>
+                <li><a href="favourites.html">Favourites</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="cart.html">🛒 Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="shop-banner">
+        <h1>Discover Our Exclusive Collection</h1>
+        <p>Find the perfect outfit for any occasion – from casual wear to luxury fashion.</p>
+    </section>
+    
+    <section class="products">
+        <h2>Our Best Sellers</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="41.webp" alt="Elegant Jacket">
+                <p class="product-name">Elegant Leather Jacket</p>
+                <p class="price">$199.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="360_F_303082827_YvHx1wifAKKysao9wdNvHJ6KP7RHU6Us.jpg" alt="Sneakers">
+                <p class="product-name">Premium Sneakers</p>
+                <p class="price">$129.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="baner-site_ff45df03-84b3-4d76-b1f7-6f14dfad1db2_500x.webp" alt="Jeans">
+                <p class="product-name">Stylish Blue Jeans</p>
+                <p class="price">$89.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="main_fashion-website-design-cover.webp" alt="Watch">
+                <p class="product-name">Luxury Wristwatch</p>
+                <p class="price">$249.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="young-man-wearing-winter-clothes-600nw-1139682401.webp" alt="Handbag">
+                <p class="product-name">Elegant Handbag</p>
+                <p class="price">$179.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Fashion Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

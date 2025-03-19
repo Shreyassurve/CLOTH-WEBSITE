@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Fashion Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Fashion Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="settings.html" class="active">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="settings">
+        <h1>Account Settings</h1>
+        <div class="settings-container">
+            <div class="setting-item">
+                <label for="username">Username:</label>
+                <input type="text" id="username" value="JohnDoe">
+            </div>
+            <div class="setting-item">
+                <label for="email">Email:</label>
+                <input type="email" id="email" value="johndoe@example.com">
+            </div>
+            <div class="setting-item">
+                <label for="password">Password:</label>
+                <input type="password" id="password" value="password123">
+            </div>
+            <div class="setting-item">
+                <label for="dark-mode">Dark Mode:</label>
+                <input type="checkbox" id="dark-mode">
+            </div>
+            <div class="setting-item">
+                <label for="language">Language:</label>
+                <select id="language">
+                    <option value="english" selected>English</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="french">French</option>
+                    <option value="german">German</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label for="notifications">Enable Notifications:</label>
+                <input type="checkbox" id="notifications">
+            </div>
+            <div class="setting-item">
+                <label for="privacy">Privacy Settings:</label>
+                <select id="privacy">
+                    <option value="public">Public</option>
+                    <option value="private" selected>Private</option>
+                </select>
+            </div>
+            <button class="save-btn">Save Changes</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fashion Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector(".save-btn").addEventListener("click", function() {
+            alert("Settings saved successfully!");
+        });
+    </script>
+</body>
+</html>

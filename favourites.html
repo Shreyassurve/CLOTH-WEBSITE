@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourites</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .favourites {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            color: white;
+        }
+        .favourites-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ff3366;
+        }
+        .remove-btn {
+            background: #ff3366;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .remove-btn:hover {
+            background: #cc0033;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Fashion Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="favourites.html" class="active">Favourites</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="cart.html">🛒 Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="favourites">
+        <div class="favourites-container">
+            <h1>Your Favourite Items</h1>
+            <p>Save your top picks and shop later!</p>
+        </div>
+    </section>
+    
+    <section class="products">
+        <div class="product-grid">
+            <div class="product">
+                <img src="dress.jpg" alt="Elegant Dress">
+                <p>Elegant Evening Dress</p>
+                <p class="price">$120.00</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <div class="product">
+                <img src="heels.jpg" alt="Stylish Heels">
+                <p>Stylish High Heels</p>
+                <p class="price">$75.00</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <div class="product">
+                <img src="handbag.jpg" alt="Designer Handbag">
+                <p>Luxury Designer Handbag</p>
+                <p class="price">$199.99</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <div class="product">
+                <img src="jacket.jpg" alt="Chic Jacket">
+                <p>Chic Leather Jacket</p>
+                <p class="price">$89.99</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Fashion Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

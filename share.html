@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share - Fashion Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Fashion Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="share.html" class="active">Share</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="share-section">
+        <h1>Share Fashion Hub with Your Friends!</h1>
+        <p>Love our collection? Spread the word and share it with your friends.</p>
+        <button onclick="shareWebsite()" class="share-btn">Share Now</button>
+        <div class="share-options">
+            <p>Or share via:</p>
+            <button onclick="shareOnFacebook()" class="social-btn fb">Facebook</button>
+            <button onclick="shareOnTwitter()" class="social-btn twitter">Twitter</button>
+            <button onclick="shareOnWhatsApp()" class="social-btn whatsapp">WhatsApp</button>
+        </div>
+        <div class="copy-link">
+            <p>Copy this link:</p>
+            <input type="text" id="share-link" value="https://fashionhub.com" readonly>
+            <button onclick="copyLink()" class="copy-btn">Copy Link</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fashion Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

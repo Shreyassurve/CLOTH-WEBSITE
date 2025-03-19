@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .cart {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #ffb347, #ffcc33);
+            color: white;
+        }
+        .cart-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .cart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+        .cart-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .cart-item:hover {
+            transform: scale(1.05);
+        }
+        .cart-item img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #ff5733;
+        }
+        .remove-btn, .checkout-btn {
+            background: #ff5733;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        .remove-btn:hover, .checkout-btn:hover {
+            background: #cc4400;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Fashion Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html" class="active">Cart</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="favourites.html">Favourites</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="cart">
+        <div class="cart-container">
+            <h1>Your Shopping Cart</h1>
+            <p>Review your selected items before checkout.</p>
+        </div>
+    </section>
+    
+    <section class="products">
+        <div class="cart-grid">
+            <div class="cart-item">
+                <img src="dress.jpg" alt="Elegant Dress">
+                <p>Elegant Evening Dress</p>
+                <p class="price">$120.00</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <div class="cart-item">
+                <img src="heels.jpg" alt="Stylish Heels">
+                <p>Stylish High Heels</p>
+                <p class="price">$75.00</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <div class="cart-item">
+                <img src="handbag.jpg" alt="Designer Handbag">
+                <p>Luxury Designer Handbag</p>
+                <p class="price">$199.99</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <div class="cart-item">
+                <img src="jacket.jpg" alt="Chic Jacket">
+                <p>Chic Leather Jacket</p>
+                <p class="price">$89.99</p>
+                <button class="remove-btn">Remove</button>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Fashion Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

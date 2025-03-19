@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .profile-container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 420px;
+        }
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ff6600;
+        }
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #333;
+        }
+        .profile-bio {
+            color: #777;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+        .profile-info {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #444;
+        }
+        .section {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .section h3 {
+            color: #ff6600;
+            border-bottom: 2px solid #ff6600;
+            padding-bottom: 5px;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .section li {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .btn {
+            display: inline-block;
+            background: #ff6600;
+            color: white;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #cc5500;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="profile-name" id="name">John Doe</div>
+        <div class="profile-bio" id="bio">Frequent Shopper | Fashion Enthusiast</div>
+        <div class="profile-info" id="location">Location: New York, USA</div>
+        <div class="profile-info" id="email">Email: john.doe@example.com</div>
+        
+        <div class="section order-history">
+            <h3>Recent Orders</h3>
+            <ul id="orders">
+                <li>Loading orders...</li>
+            </ul>
+        </div>
+        
+        <div class="section wishlist">
+            <h3>Wishlist</h3>
+            <ul id="wishlist">
+                <li>Loading wishlist...</li>
+            </ul>
+        </div>
+
+        <div class="section settings">
+            <h3>Settings</h3>
+            <a href="settings.html" class="btn">Go to Settings</a>
+        </div>
+    </div>
+    
+    <script>
+        // Simulated user data
+        const userProfile = {
+            name: "Jane Smith",
+            bio: "Loyal Customer | Tech Lover",
+            location: "San Francisco, USA",
+            email: "jane.smith@example.com",
+            profilePic: "jane.jpg",
+            orders: [
+                "Order #1234 - Nike Sneakers",
+                "Order #5678 - Apple iPhone 14",
+                "Order #9101 - Adidas Hoodie"
+            ],
+            wishlist: [
+                "Gucci Handbag",
+                "Samsung Galaxy Watch",
+                "Ray-Ban Sunglasses"
+            ]
+        };
+
+        // Update profile dynamically
+        document.getElementById("name").textContent = userProfile.name;
+        document.getElementById("bio").textContent = userProfile.bio;
+        document.getElementById("location").textContent = "Location: " + userProfile.location;
+        document.getElementById("email").textContent = "Email: " + userProfile.email;
+        document.querySelector(".profile-pic").src = userProfile.profilePic;
+        
+        // Load recent orders
+        const ordersList = document.getElementById("orders");
+        ordersList.innerHTML = "";
+        userProfile.orders.forEach(order => {
+            const li = document.createElement("li");
+            li.textContent = order;
+            ordersList.appendChild(li);
+        });
+        
+        // Load wishlist
+        const wishlistList = document.getElementById("wishlist");
+        wishlistList.innerHTML = "";
+        userProfile.wishlist.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            wishlistList.appendChild(li);
+        });
+    </script>
+</body>
+</html>
