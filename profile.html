@@ -78,8 +78,56 @@
         .btn:hover {
             background: #cc5500;
         }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background: black;
+            margin: 5px;
+            transition: 0.3s;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: white;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                width: 200px;
+                padding: 10px 0;
+                z-index: 999;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links a {
+                color: black;
+                padding: 10px;
+                text-decoration: none;
+                display: block;
+                font-size: 18px;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="profile-container">
         <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
